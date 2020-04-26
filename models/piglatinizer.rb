@@ -12,6 +12,7 @@ class PigLatinizer
   
   def phrase_to_pig(phrase)
     array = phrase.split(" ")
-    
+    pig_phrase = phrase.collect |word| do
+      
   end
 end
