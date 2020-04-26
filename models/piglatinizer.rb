@@ -12,7 +12,7 @@ class PigLatinizer
   
   def phrase_to_pig(phrase)
     array = phrase.split(" ")
-    pig_phrase = phrase.collect {|word| }
+    pig_phrase = phrase.collect {|word| piglatinize(word)}.join(" ")
     end
   end
 end
