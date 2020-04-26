@@ -13,6 +13,6 @@ class PigLatinizer
   end
   
   def phrase_to_pig(phrase)
-    array = 
+    array = phrase.split(" ")
   end
 end
