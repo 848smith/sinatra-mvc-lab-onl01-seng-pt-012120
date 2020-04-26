@@ -1,7 +1,5 @@
 require 'pry'
 class PigLatinizer
-  attr_reader :phrase
-  
   def piglatinize(word)
     if word.downcase.index(/[aeiou]/) == 0
       word + "way"
@@ -14,5 +12,6 @@ class PigLatinizer
   
   def phrase_to_pig(phrase)
     array = phrase.split(" ")
+    
   end
 end
