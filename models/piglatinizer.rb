@@ -1,15 +1,16 @@
 require 'pry'
 class PigLatinizer
-  attr_accessor :pig_phrase
-  
-  def piglatinize(word)
-    if word.downcase.index(/[aeiou]/) == 0
-      word + "way"
+  def piglatinize(user_text)
+    if user_text.split(" ").count == 1
+      if user_text.downcase.index(/[aeiou]/) == 0
+        user_text + "way"
+      else
+        vowel_index = user_text.index(/[aeiou]/)
+        front = user_text.slice!(0..vowel_index-1)
+        user_text + front + "ay"
+      end
     else
-      vowel_index = word.index(/[aeiou]/)
-      front = word.slice!(0..vowel_index-1)
-      word + front + "ay"
-    end
+      
   end
   
   def phrase_to_pig(phrase)
