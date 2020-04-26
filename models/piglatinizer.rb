@@ -12,12 +12,12 @@ class PigLatinizer
     else
       array = user_text.split(" ")
       pig_phrase = user_text.collect |word| do
-        if user_text.downcase.index(/[aeiou]/) == 0
-          user_text + "way"
+        if word.downcase.index(/[aeiou]/) == 0
+          word + "way"
         else
-          vowel_index = user_text.index(/[aeiou]/)
-          front = user_text.slice!(0..vowel_index-1)
-          user_text + front + "ay"
+          vowel_index = word.index(/[aeiou]/)
+          front = word.slice!(0..vowel_index-1)
+          word + front + "ay"
         end
       end.join(" ")
     end
