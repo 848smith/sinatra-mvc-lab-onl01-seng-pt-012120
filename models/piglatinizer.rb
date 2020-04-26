@@ -11,7 +11,7 @@ class PigLatinizer
       end
     else
       array = user_text.split(" ")
-      pig_phrase = array.collect |word| do
+      pig_phrase = array.collect {|word|
         if word.downcase.index(/[aeiou]/) == 0
           word + "way"
         else
@@ -19,7 +19,7 @@ class PigLatinizer
           front = word.slice!(0..vowel_index-1)
           word + front + "ay"
         end
-      end.join(" ")
+      }.join(" ")
     end
   end
 end
