@@ -11,4 +11,8 @@ class PigLatinizer
       word + front + "ay"
     end
   end
+  
+  def phrase_to_pig(phrase)
+    
+  end
 end
